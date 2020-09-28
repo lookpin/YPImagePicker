@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/master.swiftdeps"
+  },
+  "/Users/yoonsaegyeol/Desktop/YPImagePicker/Sources/YPImagePicker/YPImagePicker.swift": {
+    "dependencies": "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.d",
+    "object": "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.swift.o",
+    "swiftmodule": "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker~partial.swiftmodule",
+    "swift-dependencies": "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.swiftdeps"
+  }
+}

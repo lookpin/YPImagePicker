@@ -1,0 +1,19 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "\/Users\/yoonsaegyeol\/Desktop\/YPImagePicker\/.build\/x86_64-apple-macosx\/debug\/YPImagePickerPackageTests.xctest\/Contents\/MacOS\/YPImagePickerPackageTests",
+      "packageName" : "YPImagePicker",
+      "productName" : "YPImagePickerPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftTargetMap" : {
+    "C.YPImagePicker-debug.module" : "YPImagePicker",
+    "C.YPImagePickerTests-debug.module" : "YPImagePickerTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

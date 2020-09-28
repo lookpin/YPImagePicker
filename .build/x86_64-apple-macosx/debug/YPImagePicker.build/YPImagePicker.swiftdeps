@@ -1,0 +1,22 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "YPImagePicker"
+provides-nominal:
+- "13YPImagePickerAAV"
+provides-member:
+- ["13YPImagePickerAAV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "StringLiteralType"
+- "YPImagePicker"
+depends-member:
+- ["13YPImagePickerAAV", "init"]
+- ["13YPImagePickerAAV", "text"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+depends-nominal:
+- "13YPImagePickerAAV"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/module.modulemap"
+interface-hash: "9fbffa3ddec673bbe41659e0503568bf"

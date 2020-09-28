@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "YPImagePicker-debug.module": ["<YPImagePicker-debug.module>"]
+  "YPImagePickerPackageTests-debug.test": ["<YPImagePickerPackageTests-debug.test>"]
+  "YPImagePickerTests-debug.module": ["<YPImagePickerTests-debug.module>"]
+  "main": ["<YPImagePicker-debug.module>"]
+  "test": ["<YPImagePicker-debug.module>","<YPImagePickerPackageTests-debug.test>","<YPImagePickerTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/yoonsaegyeol/Desktop/YPImagePicker/Sources/YPImagePicker/":
+    is-directory-structure: true
+  "/Users/yoonsaegyeol/Desktop/YPImagePicker/Tests/YPImagePickerTests/":
+    is-directory-structure: true
+commands:
+  "<YPImagePicker-debug.module>":
+    tool: phony
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.swiftmodule"]
+    outputs: ["<YPImagePicker-debug.module>"]
+
+  "<YPImagePickerPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerPackageTests.xctest/Contents/MacOS/YPImagePickerPackageTests"]
+    outputs: ["<YPImagePickerPackageTests-debug.test>"]
+
+  "<YPImagePickerTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/XCTestManifests.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/YPImagePickerTests.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.swiftmodule"]
+    outputs: ["<YPImagePickerTests-debug.module>"]
+
+  "C.YPImagePicker-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/Sources/YPImagePicker/YPImagePicker.swift"]
+    outputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "YPImagePicker"
+    module-output-path: "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.swiftmodule"
+    import-paths: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build"
+    objects: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker-Swift.h","-color-diagnostics"]
+    sources: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/Sources/YPImagePicker/YPImagePicker.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 12
+
+  "C.YPImagePickerPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/XCTestManifests.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/YPImagePickerTests.swift.o"]
+    outputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerPackageTests.xctest/Contents/MacOS/YPImagePickerPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/YPImagePickerPackageTests.xctest/Contents/MacOS/YPImagePickerPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug","-o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerPackageTests.xctest/Contents/MacOS/YPImagePickerPackageTests","-module-name","YPImagePickerPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.YPImagePickerTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/Tests/YPImagePickerTests/XCTestManifests.swift","/Users/yoonsaegyeol/Desktop/YPImagePicker/Tests/YPImagePickerTests/YPImagePickerTests.swift","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.swiftmodule"]
+    outputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/XCTestManifests.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/YPImagePickerTests.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "YPImagePickerTests"
+    module-output-path: "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.swiftmodule"
+    import-paths: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build"
+    objects: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/XCTestManifests.swift.o","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePickerTests.build/YPImagePickerTests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-color-diagnostics"]
+    sources: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/Tests/YPImagePickerTests/XCTestManifests.swift","/Users/yoonsaegyeol/Desktop/YPImagePicker/Tests/YPImagePickerTests/YPImagePickerTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 12
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/yoonsaegyeol/Desktop/YPImagePicker/Sources/YPImagePicker/","/Users/yoonsaegyeol/Desktop/YPImagePicker/Tests/YPImagePickerTests/","/Users/yoonsaegyeol/Desktop/YPImagePicker/Package.swift","/Users/yoonsaegyeol/Desktop/YPImagePicker/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

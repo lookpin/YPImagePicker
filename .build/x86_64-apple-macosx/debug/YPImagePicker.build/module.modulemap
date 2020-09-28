@@ -1,0 +1,4 @@
+module YPImagePicker {
+    header "/Users/yoonsaegyeol/Desktop/YPImagePicker/.build/x86_64-apple-macosx/debug/YPImagePicker.build/YPImagePicker-Swift.h"
+    requires objc
+}
