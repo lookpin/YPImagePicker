@@ -13,7 +13,7 @@ let package = Package(
         .package(url: "https://github.com/HHK1/PryntTrimmerView", .exact("4.0.2"))
     ],
     targets: [
-        .target(name: "YPImagePicker", dependencies: ["Stevia", "PryntTrimmerView"]),
+        .target(name: "YPImagePicker", dependencies: ["Stevia", "PryntTrimmerView"], path: "Source"),
         .testTarget(name: "YPImagePickerTests", dependencies: ["YPImagePicker"]),
     ]
 )
